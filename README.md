@@ -1,6 +1,7 @@
-# versiontwo
+# Ekologic
 
-A new Flutter project.
+App that helps u segregate and recycle.
+At this moment designed only for citizens of Leszno, Poland.
 
 ## Getting Started
 
