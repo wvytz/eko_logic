@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class DateTimePickerWidget extends StatefulWidget {
   @override
@@ -78,12 +79,23 @@ class _DateTimePickerWidgetState extends State<DateTimePickerWidget> {
             });
           },
           ),
-          Divider(color: Colors.green, indent: 16.0),
+          Divider(color: Colors.lime, indent: 16.0),
           ListTile(
               leading: Icon(FontAwesomeIcons.couch),
               title: Text('Następna zbiórka objazdowa'),
               subtitle: Text('21 wrzesień 2019'),
           ),
+          
+          /* Divider(color: Colors.lime, indent: 16.0),
+          ListTile(
+            title: Text('Harmonogram'),
+            subtitle: Text('kliknij ikonę aby pobrać'),
+            leading: IconButton(
+              icon: Icon(FontAwesomeIcons.fileDownload),
+              onPressed: _launchURL,
+              ), 
+            
+          ),*/
         ],
       ),
     );
@@ -107,3 +119,12 @@ class _DateTimePickerWidgetState extends State<DateTimePickerWidget> {
     );
   }
 }
+
+/* _launchURL() async {
+  const url = 'https://kzgrl.pl/pliki/PDF/Harmonogramy/Harmonogramy%202017-2019/Leszno-nowy%2017.05.2019.pdf';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Nie mogę otworzyć $url';
+  }
+} */
