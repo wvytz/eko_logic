@@ -25,7 +25,7 @@ class _MapWidgetState extends State<MapWidget> {
         leading: IconButton(
           icon: Icon(FontAwesomeIcons.arrowLeft),
           onPressed: () {
-            //
+            //dodać opcję cofania na appbarze
           },
         ),
         title: Text('Pszok Leszno'),
